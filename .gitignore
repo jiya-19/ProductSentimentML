@@ -1,0 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+
+# Raw dataset (regenerated automatically by the notebook from a public URL;
+# not committed to keep the repo lightweight)
+data/*.csv
+!data/README.md
+
+# Transformer artifacts (only produced if the Section 22 Transformer Baseline
+# is run in an environment with Hugging Face access, e.g. Google Colab;
+# not committed - these are large binary weights, not lightweight deployment
+# artifacts)
+models/distilbert_checkpoints/
+models/distilbert_sentiment/
+
+# Jupyter
+*.log

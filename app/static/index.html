@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProductSentimentML — Review Sentiment Classifier</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="page">
+
+  <header class="masthead">
+    <div class="masthead-row">
+      <h1>ProductSentimentML</h1>
+      <span class="tag">Negative · Neutral · Positive</span>
+    </div>
+    <p class="subtitle">AI-powered product review sentiment classification</p>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label for="review-input">Product review</label>
+      <textarea id="review-input" rows="6" placeholder="Enter a product review… e.g. &quot;The fabric feels cheap and it ran a full size small.&quot;"></textarea>
+      <div class="input-row">
+        <span id="char-count" class="char-count">0 / 5000</span>
+        <button id="analyze-btn" type="button">Analyze sentiment</button>
+      </div>
+    </section>
+
+    <section id="status-section" class="status-section" hidden>
+      <p id="status-message"></p>
+    </section>
+
+    <section id="result-section" class="result-section" hidden>
+      <div class="result-header">
+        <span class="result-label">Predicted sentiment</span>
+        <span id="result-sentiment" class="result-sentiment"></span>
+      </div>
+
+      <div class="prob-bars" id="prob-bars">
+        <!-- filled in by script.js -->
+      </div>
+
+      <p class="result-note">
+        Probabilities are calibrated model output (via <code>CalibratedClassifierCV</code>), not raw
+        decision-function scores.
+      </p>
+    </section>
+
+    <section class="about">
+      <h2>About this model</h2>
+      <dl>
+        <div>
+          <dt>Model</dt>
+          <dd>Calibrated Linear SVM over TF-IDF features (unigrams + bigrams)</dd>
+        </div>
+        <div>
+          <dt>Sentiment classes</dt>
+          <dd>Negative, Neutral, Positive — derived from a 1–5 star rating convention (1–2 → Negative, 3 → Neutral, 4–5 → Positive)</dd>
+        </div>
+        <div>
+          <dt>Trained on</dt>
+          <dd>22,634 real e-commerce clothing reviews</dd>
+        </div>
+        <div>
+          <dt>Research</dt>
+          <dd>Full experimental comparison against Logistic Regression, Naive Bayes, and a DistilBERT transformer baseline is in the project notebook.</dd>
+        </div>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>ProductSentimentML — a comparative NLP research project. Not intended for high-stakes automated decisions.</p>
+  </footer>
+
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>

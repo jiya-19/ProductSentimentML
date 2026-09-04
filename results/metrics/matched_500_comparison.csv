@@ -1,0 +1,3 @@
+Model,Training setup,Evaluation reviews,Accuracy,Macro Precision,Macro Recall,Macro F1,Status
+Linear SVM,Full classical training split,500,,,,,Pending notebook execution with dataset
+DistilBERT,"2,000-review subset, 2 epochs",500,,,,,Pending Colab/Hugging Face execution

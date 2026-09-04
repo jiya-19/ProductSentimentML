@@ -1,0 +1,8 @@
+Experiment,Configuration,Accuracy,Precision,Recall,F1
+A - Unigrams vs Bigrams,Unigrams only,0.7592,0.5678,0.6294,0.5884
+A - Unigrams vs Bigrams,Unigrams + Bigrams,0.7829,0.5845,0.6281,0.6014
+B - Algorithm Comparison,Linear SVM,0.8191,0.6141,0.5951,0.603
+B - Algorithm Comparison,Logistic Regression,0.7829,0.5845,0.6281,0.6014
+B - Algorithm Comparison,Multinomial Naive Bayes,0.7765,0.5966,0.3516,0.3265
+C - Default vs Tuned,Linear SVM (default),0.8025,0.585,0.5754,0.58
+C - Default vs Tuned,Linear SVM (tuned),0.8191,0.6141,0.5951,0.603

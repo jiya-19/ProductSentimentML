@@ -1,0 +1,5 @@
+,Accuracy,Precision,Recall,F1
+Linear SVM,0.8191,0.6141,0.5951,0.603
+Logistic Regression,0.7829,0.5845,0.6281,0.6014
+Multinomial Naive Bayes,0.7765,0.5966,0.3516,0.3265
+Dummy Classifier,0.7705,0.2568,0.3333,0.2901

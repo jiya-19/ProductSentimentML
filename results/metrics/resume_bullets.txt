@@ -1,0 +1,11 @@
+- Developed an end-to-end NLP pipeline for 3-class product-review sentiment classification on
+  22,634 real reviews using TF-IDF feature engineering and multiple classical machine-learning
+  algorithms, achieving 81.9% test accuracy and 0.603 macro F1
+  with a tuned Linear SVM.
+- Conducted controlled experiments comparing Logistic Regression, Multinomial Naive Bayes, Linear
+  SVM and a DistilBERT transformer baseline (implemented for Google Colab execution) using 5-fold stratified cross-validation, GridSearchCV
+  hyperparameter tuning (+0.023 macro F1), and an n-gram ablation study
+  (+0.013 macro F1 from adding bigrams).
+- Built and deployed a FastAPI-based sentiment-analysis web application with a calibrated
+  probability-output ML pipeline (`CalibratedClassifierCV`), a vanilla HTML/CSS/JS frontend, and a
+  single-service Render deployment configuration.

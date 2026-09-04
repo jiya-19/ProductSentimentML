@@ -1,0 +1,11 @@
+-r requirements.txt
+matplotlib==3.10.8
+seaborn==0.13.2
+wordcloud==1.9.6
+nbformat==5.10.4
+nbconvert==7.17.1
+# DistilBERT section (install in Colab or another environment with Hugging Face access):
+# transformers
+# datasets
+# accelerate
+# torch

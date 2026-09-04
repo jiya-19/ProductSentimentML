@@ -1,0 +1,7 @@
+Comparison,Approach,Model,Training setup,Evaluation reviews,Accuracy,Macro Precision,Macro Recall,Macro F1,Status
+Full classical test set,Baseline,Dummy Classifier,Full classical training split,4527,0.7704881820189972,0.2568293940063323,0.3333333333333333,0.2901226866292368,Previously validated classical result
+Full classical test set,Classical,Multinomial Naive Bayes,Full classical training split,4527,0.7764523967307267,0.59655728283716,0.3516410888316343,0.3264911083171756,Previously validated classical result
+Full classical test set,Classical,Logistic Regression,Full classical training split,4527,0.7828584051248068,0.584541952217758,0.6281493062656703,0.601383401261677,Previously validated classical result
+Full classical test set,Classical,Linear SVM,Full classical training split,4527,0.8190854870775348,0.6141295444810515,0.5951133247565741,0.60303997193851,Previously validated classical result
+Matched 500-review test set,Classical,Linear SVM,Full classical training split,500,,,,,Pending notebook execution with dataset
+Matched 500-review test set,Transformer,DistilBERT,"2,000-review subset, 2 epochs",500,,,,,Pending Colab/Hugging Face execution

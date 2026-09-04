@@ -1,0 +1,4 @@
+,Train Time (s),Inference Time on Test Set (s),Reviews/sec (inference),Serialized Model Size (KB)
+Linear SVM,1.2,0.12,36298.32,1130.33
+Logistic Regression,1.56,0.13,34102.6,1130.43
+Multinomial Naive Bayes,0.87,0.12,37125.06,1552.07
