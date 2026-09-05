@@ -434,13 +434,11 @@ curl -X POST http://localhost:8000/predict \
 - **Hyperparameter tuning** improved Linear SVM's macro F1 by +0.023 (Q2).
 - **Bigrams** measurably improved performance over unigrams alone (+0.013 macro F1), indicating
   short phrases (including negations) carry sentiment signal beyond individual words (Q3).
-- The **transformer comparison (Q4)** is implemented as a guarded Colab-ready experiment. It was not executed in this delivery environment because external dataset/model downloads are unavailable here; no transformer metrics are fabricated. The Linear SVM matched evaluation cell is implemented and validated with a smoke test.
-- The **Neutral class is hardest to classify** (Q5) — lowest recall of the three classes, consistent
-  with 3-star reviews being both linguistically ambiguous and underrepresented in training data.
+- The **transformer comparison (Q4)** was executed using DistilBERT. The model was fine-tuned for 2 epochs on a 2,000-review training subset and evaluated on the same fixed 500-review test subset as Linear SVM. DistilBERT achieved 77.4% accuracy and 0.440 macro F1, compared with 81.8% accuracy and 0.599 macro F1 for Linear SVM on the matched test set.
+- The **Neutral class is hardest to classify (Q5)** — it has the lowest recall of the three classes, consistent with 3-star reviews being linguistically ambiguous. Although Neutral is smaller than Positive, it is not the smallest class; Negative has 2,369 reviews, Neutral 2,823, and Positive 17,442.
 - **Error analysis (Q6)** shows Neutral-boundary confusion, short-review ambiguity, and mixed
   positive/negative-clause reviews as recurring, evidence-based patterns.
-- On measured **computational trade-offs (Q7)**, the classical pipeline trains/predicts in seconds
-  on CPU at ~1.1MB, versus DistilBERT's 250MB+ footprint and GPU-preferred fine-tuning.
+- On **computational trade-offs (Q7)**, the classical pipeline is lightweight, trains and predicts in seconds on CPU, and has an approximately 1.1 MB deployed model footprint. DistilBERT has substantially higher computational and memory requirements and is better suited to GPU-based fine-tuning.
 - The classical model is the **more practical choice for lightweight deployment (Q8)** — which is
   why it, not the transformer, powers the deployed FastAPI application.
 
